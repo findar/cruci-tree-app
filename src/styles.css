@@ -1,0 +1,93 @@
+.node,
+.branch {
+  align-items: center;
+}
+
+.node .square {
+  margin: 25px 0;
+}
+
+.flextree {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 450px;
+  width: 450px;
+  padding: 10px;
+}
+
+/* "unallocated",
+"allocated"
+"donor",
+"target",
+"mutation" */
+
+.square.null {
+  background-color: rgb(35, 35, 35);
+}
+
+.square.unallocated {
+  background-color: rgb(89, 89, 89);
+}
+
+.square.allocated {
+  background-color: rgb(200, 200, 200);
+}
+
+.branch .square {
+  clip-path: polygon(0 100%, 0 70%, 70% 0, 100% 0, 100% 30%, 30% 100%);
+}
+
+.branch .square:nth-child(2n) {
+  clip-path: polygon(0 0, 30% 0, 100% 70%, 100% 100%, 70% 100%, 0 30%);
+}
+
+.node .square {
+  border-radius: 25px;
+}
+
+.resultTree .node .donor,
+.donorTree .allocated {
+  background-color: blue;
+}
+.resultTree .target,
+.targetTree .allocated {
+  background-color: green;
+}
+.resultTree .mutation {
+  background-color: orange;
+}
+
+.square {
+  background: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 50px;
+  width: 50px;
+}
+
+.donorTree,
+.targetTree {
+  display: inline-block;
+}
+
+.inputs,
+.result {
+  display: inline-block;
+  width: 45%;
+}
+
+.result pre {
+  white-space: pre-wrap;
+  color: white;
+}
+
+* {
+  background-color: rgb(21, 21, 21);
+}
+
+.title {
+  color: white;
+  font-size: 24px;
+}
