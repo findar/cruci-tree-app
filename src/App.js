@@ -1,4 +1,6 @@
 import { useState } from "react";
+import React from "react";
+
 
 function Square({ value, onSquareClick, possibleNodeValues }) {
   return (
@@ -260,7 +262,7 @@ export default function Game() {
   }
 
   return (
-    <>
+    <div>
       <div className="inputs">
         <Board
           tree={tree[0]}
@@ -287,6 +289,6 @@ export default function Game() {
         />
         <pre>{`${JSON.stringify(tree)}`}</pre>
       </div>
-    </>
+    </div>
   );
 }
