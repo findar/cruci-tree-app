@@ -4,8 +4,10 @@
     "react-dom": "^18.0.0",
     "react-scripts": "^5.0.0"
   },
+  "homepage": "https://findar.github.io/cruci-tree-app",
   "main": "/index.js",
   "devDependencies": {
+    "gh-pages": "^5.0.0",
     "react-scripts": "1.0.0"
   },
   "keywords": [],
@@ -16,6 +18,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   }
 }
